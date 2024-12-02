@@ -11,7 +11,9 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, TutorialMod.MOD_ID);
 
-    public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register(name:"alexandrite", () -> new Item(new Item.Properties()));
+    private static String name;
+    public static final RegistryObject<Item> ALEXANDRITE = ITEMS.register(name:"alexandrite",
+        () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
