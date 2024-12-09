@@ -1,6 +1,7 @@
 package com.sania.tutorialmod;
 
 import com.mojang.logging.LogUtils;
+import com.sania.tutorialmod.block.ModBlocks;
 import com.sania.tutorialmod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -34,6 +35,7 @@ public class TutorialMod {
         MinecraftForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
